@@ -6,6 +6,6 @@
     $r = mysqli_query($dbc,$q) or die(mysqli_error($dbc));
 
     while($row=mysqli_fetch_array($r)){
-        echo $row['bookname'];
+        echo '<p><a href="details.php?id='.$row['productid'].'">'.$row['bookname'].'</p></a>';
     }
 ?>
